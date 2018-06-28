@@ -8,6 +8,9 @@
 
 import UIKit
 
+public typealias Range = CountableRange
+public typealias ClosedRange = CountableClosedRange
+
 public final class Former: NSObject {
     
     // MARK: Public
@@ -83,14 +86,6 @@ public final class Former: NSObject {
     }
 
     public subscript(range: ClosedRange<Int>) -> [SectionFormer] {
-        return Array<SectionFormer>(sectionFormers[range])
-    }
-
-    public subscript(range: CountableRange<Int>) -> [SectionFormer] {
-        return Array<SectionFormer>(sectionFormers[range])
-    }
-
-    public subscript(range: CountableClosedRange<Int>) -> [SectionFormer] {
         return Array<SectionFormer>(sectionFormers[range])
     }
 
